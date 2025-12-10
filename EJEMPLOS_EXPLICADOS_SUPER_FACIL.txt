@@ -1,0 +1,93 @@
+EJEMPLOS EXPLICADOS DE HTML Y BOOTSTRAP (Nivel Súper Fácil)
+
+---
+
+Ejemplo 1: Barra de navegación
+-----------------------------
+
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+
+👉 Esto es una barra de navegación con varios estilos de Bootstrap. Cada clase hace algo distinto:
+
+- navbar → dice: “esto es una barra de navegación”.
+- navbar-expand-lg → cuando la pantalla es grande (desde 992px de ancho), el menú se muestra completo. En pantallas más chicas se convierte en el botón hamburguesa.
+- navbar-light → usa colores de texto oscuros (para fondos claros) y hace que se vea bien el ícono del botón.
+- bg-white → le pone fondo blanco.
+- shadow-sm → le agrega una sombra suave para que no se vea plano.
+- fixed-top → la barra queda pegada arriba aunque hagas scroll.
+
+Es decir:
+📱 En celular → ves el logo + botón hamburguesa.
+💻 En PC → ves el logo a la izquierda y el menú a la derecha, siempre arriba de todo.
+
+---
+
+Ejemplo 2: Botón de menú en celulares
+-------------------------------------
+
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+</button>
+
+👉 Este botón aparece solo en pantallas chicas. Al hacer clic, muestra u oculta el menú.
+- class="navbar-toggler" → le da el estilo de botón hamburguesa.
+- type="button" → indica que es un botón.
+- data-bs-toggle="collapse" → activa el menú desplegable.
+- data-bs-target="#navbarNav" → indica qué menú se va a mostrar/ocultar.
+- aria-controls, aria-expanded, aria-label → ayudan a que personas con discapacidad puedan usar el menú.
+
+---
+
+Ejemplo 3: Enlace del menú
+--------------------------
+
+<li class="nav-item"><a class="nav-link" href="#fotos">Fotos</a></li>
+
+👉 Esto es un ítem del menú. Al hacer clic, te lleva a la sección de fotos.
+- class="nav-item" → define el ítem del menú.
+- class="nav-link" → define el estilo del enlace.
+- href="#fotos" → indica a qué parte de la página te lleva (la sección con id="fotos").
+
+---
+
+Ejemplo 4: Sección de bienvenida (hero)
+---------------------------------------
+
+<section id="inicio" class="hero-section ...">
+  ...contenido...
+</section>
+
+👉 Es la primera sección que ven los visitantes. Tiene fondo de colores y texto grande.
+- id="inicio" → permite que el menú te lleve directo aquí.
+- class="hero-section ..." → define el estilo y el fondo.
+
+---
+
+Ejemplo 5: Carrusel de fotos
+----------------------------
+
+<div id="carouselFotos" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+  ...contenido...
+</div>
+
+👉 Es una galería de fotos que se mueve sola y con flechas.
+- id="carouselFotos" → identifica el carrusel.
+- class="carousel slide" → activa el carrusel de Bootstrap.
+- data-bs-ride="carousel" → hace que funcione automáticamente.
+- data-bs-interval="3000" → cambia de foto cada 3 segundos.
+
+---
+
+Ejemplo 6: Botón para redes sociales
+------------------------------------
+
+<a href="#" class="btn btn-outline-primary btn-lg" target="_blank">Facebook</a>
+
+👉 Es un botón que lleva a Facebook y se abre en una nueva pestaña.
+- href="#" → aquí va el enlace real de tu Facebook.
+- class="btn btn-outline-primary btn-lg" → botón grande, borde azul.
+- target="_blank" → abre el enlace en otra pestaña.
+
+---
+
+Cada ejemplo tiene el código y la explicación de qué hace cada parte, pensado para que lo entiendas aunque nunca hayas programado antes. Si tienes dudas, busca el nombre de la clase o atributo en internet y verás ejemplos visuales.

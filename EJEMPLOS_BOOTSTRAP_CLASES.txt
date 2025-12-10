@@ -1,0 +1,27 @@
+EJEMPLOS DE CLASES DE BOOTSTRAP EXPLICADAS (Nivel Súper Fácil)
+
+---
+
+py-5
+----
+- py-5: Esta clase de Bootstrap agrega un padding (espacio) grande arriba y abajo del elemento.
+- "p" significa padding (espacio interno).
+- "y" significa eje vertical (arriba y abajo).
+- "5" es el tamaño (Bootstrap tiene valores del 0 al 5, donde 5 es el más grande).
+
+Ejemplo práctico:
+<section class="py-5"> ... </section>
+👉 El contenido dentro de esta sección tendrá mucho espacio arriba y abajo, lo que hace que se vea más separado y ordenado.
+
+Otras clases similares:
+-----------------------
+- px-5: padding grande a los lados (izquierda y derecha).
+- pt-5: padding grande solo arriba (top).
+- pb-5: padding grande solo abajo (bottom).
+- p-3: padding mediano en todos los lados.
+
+¿Para qué sirve el padding?
+--------------------------
+El padding ayuda a que el contenido no esté pegado al borde del elemento, haciendo que la página se vea más limpia y fácil de leer.
+
+Puedes combinar varias clases para ajustar el espacio como quieras.

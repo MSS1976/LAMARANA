@@ -1,0 +1,275 @@
+EJEMPLOS EXPLICADOS DE HTML Y BOOTSTRAP (Nivel Súper Fácil)
+
+---
+
+Ejemplo 1: Barra de navegación
+-----------------------------
+
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+
+👉 Esto es una barra de navegación con varios estilos de Bootstrap. Cada clase hace algo distinto:
+
+- navbar → dice: “esto es una barra de navegación”.
+- navbar-expand-lg → cuando la pantalla es grande (desde 992px de ancho), el menú se muestra completo. En pantallas más chicas se convierte en el botón hamburguesa.
+- navbar-light → usa colores de texto oscuros (para fondos claros) y hace que se vea bien el ícono del botón.
+- bg-white → le pone fondo blanco.
+- shadow-sm → le agrega una sombra suave para que no se vea plano.
+- fixed-top → la barra queda pegada arriba aunque hagas scroll.
+
+Es decir:
+📱 En celular → ves el logo + botón hamburguesa.
+💻 En PC → ves el logo a la izquierda y el menú a la derecha, siempre arriba de todo.
+
+---
+
+Ejemplo 2: Botón de menú en celulares
+-------------------------------------
+
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+</button>
+
+👉 Este botón aparece solo en pantallas chicas. Al hacer clic, muestra u oculta el menú.
+- class="navbar-toggler" → le da el estilo de botón hamburguesa.
+- type="button" → indica que es un botón.
+- data-bs-toggle="collapse" → activa el menú desplegable.
+- data-bs-target="#navbarNav" → indica qué menú se va a mostrar/ocultar.
+- aria-controls, aria-expanded, aria-label → ayudan a que personas con discapacidad puedan usar el menú.
+ - <span class="navbar-toggler-icon"></span> : se usa dentro del botón de una navbar colapsable (el botón “hamburguesa”). 
+
+1️⃣ Elemento
+<span>: es un contenedor en línea, no tiene estilo propio, solo sirve para aplicar clases o estilos.
+
+2️⃣ Clase
+navbar-toggler-icon: es una clase de Bootstrap que dibuja automáticamente el ícono de menú tipo “hamburguesa” (tres rayitas horizontales) usando CSS.
+
+3️⃣ Contexto
+Va dentro de un <button class="navbar-toggler" ...> que sirve para abrir o cerrar el menú colapsado en pantallas pequeñas.
+
+Bootstrap hace que, al hacer clic en este botón, se despliegue el menú con la animación de colapso.
+
+
+
+
+---
+
+Ejemplo 3: Enlace del menú
+--------------------------
+
+<li class="nav-item"><a class="nav-link" href="#fotos">Fotos</a></li>
+
+👉 Esto es un ítem del menú. Al hacer clic, te lleva a la sección de fotos.
+- class="nav-item" → define el ítem del menú.
+- class="nav-link" → define el estilo del enlace.
+- href="#fotos" → indica a qué parte de la página te lleva (la sección con id="fotos").
+
+
+
+---------------------------------
+<main class="container-fluid p-3" style="margin-top: 50px; scroll-behavior: smooth;">
+
+1️⃣ <main>
+Define el contenido principal de la página (semántica HTML5).
+
+Solo debe haber un <main> por página.
+
+Ayuda a SEO y accesibilidad.
+
+2️⃣ class="container-fluid p-3"
+container-fluid: el contenedor ocupa todo el ancho de la ventana, adaptándose al tamaño de pantalla.
+
+p-3: agrega padding de 1rem alrededor de todo el contenido para que no quede pegado a los bordes.
+
+3️⃣ style="margin-top: 50px;"
+Separa el contenido del <main> de la navbar fija para que no quede tapado.
+
+Afecta solo el espacio arriba del contenido.
+
+4️⃣ style="scroll-behavior: smooth;"
+Hace que los desplazamientos internos hacia anclas (#id) sean suaves en lugar de saltos bruscos.
+
+Solo afecta el scroll dentro del contenedor y de la página.
+
+
+------------------------------------------
+
+Ejemplo 4: Sección de bienvenida (hero)
+---------------------------------------
+
+1️⃣ <section>
+
+Elemento semántico HTML5.
+
+Define una sección independiente de la página.
+
+Aquí representa la zona de bienvenida o “hero section”.
+
+2️⃣ id="inicio"
+
+Identificador único.
+
+Permite que enlaces apunten a esta sección: <a href="#inicio">Ir al inicio</a>
+
+También sirve para CSS o JS específicos.
+
+3️⃣ class="hero-section d-flex align-items-center justify-content-center text-center text-white"
+
+hero-section: clase personalizada, normalmente usada para estilos propios.
+
+d-flex: activa Flexbox de Bootstrap para organizar contenido dentro de la sección.
+
+align-items-center: centra verticalmente los elementos dentro del contenedor (eje y).
+
+justify-content-center: centra horizontalmente los elementos (eje x).
+
+text-center: centra el texto dentro de la sección.
+
+text-white: pone el texto en color blanco.
+
+<div class="container" style="max-width: 900px;">
+    <h1 class="display-4 fw-bold mb-3">Bienvenidos a la Institución</h1>
+    <p class="lead mb-4">Comprometidos con la excelencia y el desarrollo de nuestra comunidad.</p>
+    <a href="#contacto" class="btn btn-light btn-lg shadow">Contáctanos</a>
+</div>
+1️⃣ <div class="container" style="max-width: 900px;">
+div: contenedor genérico en HTML.
+
+container: clase de Bootstrap que centra el contenido y aplica padding horizontal automáticamente.
+
+style="max-width: 900px;": limita el ancho máximo a 900px, evitando que el contenido se estire demasiado en pantallas grandes.
+
+2️⃣ <h1 class="display-4 fw-bold mb-3">
+display-4: clase de Bootstrap para un título grande estilo “hero”.
+
+fw-bold: aplica negrita al texto.
+
+mb-3: aplica un margin-bottom de 1rem para separar el título del siguiente elemento.
+
+3️⃣ <p class="lead mb-4">
+lead: clase de Bootstrap para párrafos de introducción, con fuente ligeramente más grande y espaciado especial.
+
+mb-4: margen inferior de 1.5rem, separa el párrafo del botón.
+
+4️⃣ <a href="#contacto" class="btn btn-light btn-lg shadow">
+btn: convierte el enlace en un botón de Bootstrap.
+
+btn-light: estilo de botón con fondo claro.
+
+btn-lg: botón grande.
+
+shadow: aplica una sombra sutil para dar profundidad visual.
+
+href="#contacto": al hacer clic, desplaza suavemente a la sección con id contacto (si tu <main> tiene scroll-behavior: smooth).
+
+✅ Resumen de lo que hace este bloque:
+Centra y limita el contenido a 900px de ancho.
+
+Muestra un título grande y en negrita.
+
+Añade un párrafo de introducción destacado.
+
+Incluye un botón grande y visible que enlaza a otra sección de la página
+
+--------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+----------------------------------------------------------------
+
+1️⃣ <div class="container">
+
+Contenedor de Bootstrap que centra el contenido y aplica márgenes laterales automáticos.
+
+Dentro va todo el contenido de la sección de fotos.
+
+2️⃣ <h2 class="fw-bold text-primary mb-4 text-center">Fotos</h2>
+
+Título de la sección.
+
+Clases usadas:
+
+fw-bold: texto en negrita.
+
+text-primary: color principal definido por Bootstrap (azul por defecto).
+
+mb-4: margen inferior para separar del contenido siguiente.
+
+text-center: centra el texto horizontalmente.
+
+3️⃣ <div id="carouselFotos" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+
+Inicia un carrusel (slider) de Bootstrap.
+
+Atributos importantes:
+
+id="carouselFotos": identificador único para controlar el carrusel.
+
+class="carousel slide": activa los estilos y comportamiento de carrusel.
+
+data-bs-ride="carousel": hace que el carrusel se inicie automáticamente.
+
+data-bs-interval="3000": cambia de slide cada 3000 ms (3 segundos).
+
+4️⃣ <div class="carousel-inner">
+
+Contenedor de los elementos del carrusel (slides).
+
+Cada slide va dentro de un carousel-item.
+
+5️⃣ <div class="carousel-item active"> y siguientes
+
+Cada carousel-item es un grupo de imágenes que se mostrará como un slide.
+
+active indica que este slide se muestra primero.
+
+Dentro se usa un row y varias col-md-4 para dividir las imágenes en 3 columnas responsivas.
+
+6️⃣ <img src="..." class="d-block w-100 rounded shadow" alt="...">
+
+Cada imagen dentro del carrusel.
+
+Clases usadas:
+
+d-block: muestra la imagen como bloque.
+
+w-100: ancho completo de su columna.
+
+rounded: bordes redondeados.
+
+shadow: sombra ligera debajo de la imagen.
+
+7️⃣ Botones de control
+<button class="carousel-control-prev" type="button" data-bs-target="#carouselFotos" data-bs-slide="prev">
+
+
+Botón para ir al slide anterior (prev).
+
+data-bs-target="#carouselFotos": indica a qué carrusel controla (por el id).
+
+data-bs-slide="prev": acción de mover al slide anterior.
+
+Igual para el botón next, que mueve al siguiente.
+
+Dentro de cada botón:
+
+<span class="carousel-control-prev-icon"></span>: ícono de flecha.
+
+<span class="visually-hidden">Anterior</span>: texto accesible para lectores de pantalla.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Ejemplo 6: Botón para redes sociales
+------------------------------------
+
+<a href="#" class="btn btn-outline-primary btn-lg" target="_blank">Facebook</a>
+
+👉 Es un botón que lleva a Facebook y se abre en una nueva pestaña.
+- href="#" → aquí va el enlace real de tu Facebook.
+- class="btn btn-outline-primary btn-lg" → botón grande, borde azul.
+- target="_blank" → abre el enlace en otra pestaña.
+
+---
+
+Cada ejemplo tiene el código y la explicación de qué hace cada parte, pensado para que lo entiendas aunque nunca hayas programado antes. Si tienes dudas, busca el nombre de la clase o atributo en internet y verás ejemplos visuales.
